@@ -1,0 +1,57 @@
+<ion-view view-title="Add Deck">
+  <ion-content>
+  <ion-toggle ng-model="airplaneMode" toggle-class="toggle-balanced"> Post Online</ion-toggle>
+<div class="list"></div><br>
+
+<form name = "addTrickForm" novalidate>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="John" ng-model = "name" name = "name" required>
+  </label>
+  <label class="item item-input item-stacked-label largeClass">
+    <span class="input-label" required>Description</span>
+    <input type="text" placeholder="Suhr" ng-model = "description" name = "description" required>
+  </label>
+</div>
+<br/>
+
+<div class="card no-padding" ng-show ="{{deck !== undefined}}">
+  <div class="item item-text-wrap">
+    Select the trick you want to include in this deck!
+  </div>
+</div>
+
+<div class="card no-padding" ng-show ="{{deck === undefined}}">
+  <div class="item item-text-wrap">
+    You have added no tricks! Please add tricks and comeback! 
+  </div>
+</div>
+
+
+<ion list>
+  <ion-item ng-repeat = "deck in decks">
+  <ul class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox checkbox-balanced">
+       <input type="checkbox" id="checkbox-{{$index+1}}">
+     </label>
+     {{deck.name}}
+  </li>
+
+</ul>
+    </ion-item>
+    </ion-list>
+
+<div class = "margin">
+<button class="button button-block button-balanced" ng-disabled = "addTrickForm.$invalid" ng-click = 'addDeck(name,description)'>
+  Add Deck
+</button>
+</div>
+</form>
+
+
+
+   
+  </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+
+.largeClass{
+	height: 200px !important;
+}
+.margin{
+	text-align:center;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+.no-padding{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}

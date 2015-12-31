@@ -1,0 +1,28 @@
+<ion-view view-title="Add Trick">
+  <ion-content>
+<form name = "addTrickForm" novalidate>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="John" ng-model = "name" name = "name" required>
+  </label>
+  <label class="item item-input item-stacked-label largeClass">
+    <span class="input-label" required>Description</span>
+    <input type="text" placeholder="Suhr" ng-model = "description" name = "description" required>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Youtube Link (Optional)</span>
+    <input type="text" placeholder="john@suhr.com"  ng-model = "link" name = "link">
+  </label>
+</div>
+<br/>
+<div class = "margin">
+<button class="button button-block button-balanced" ng-disabled = "addTrickForm.$invalid" ng-click = 'addTrick(name,description,link)'>
+  Add Trick
+</button>
+</div>
+</form>
+
+
+   
+  </ion-content>
+</ion-view>

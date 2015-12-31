@@ -1,0 +1,23 @@
+<ion-view view-title="YOLO">
+ <ion-nav-buttons side="right">
+        <button class="right button button-icon ion-android-add" ui-sref="deck"></button>
+    </ion-nav-buttons>
+  <ion-content class="padding">
+  <ion list>
+  <ion-item ng-repeat = "category in categories">
+  <div class="list">
+
+    <a class="item item-thumbnail-left" href="#">
+      <img src="../img/ionic.png">
+      <h2>{{category.name}}</h2>
+      <p>{{category.description}}</p>
+    </a>
+
+    </div>
+    </ion-item>
+    </ion-list>
+
+
+   
+  </ion-content>
+</ion-view>
